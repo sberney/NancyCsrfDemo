@@ -52,6 +52,7 @@ namespace NancyCsrfDemo
         public bool HandlesStatusCode(HttpStatusCode statusCode, NancyContext context)
         {
             return true;    // handles 500 errors too.
+            //return statusCode != HttpStatusCode.InternalServerError;  // We can simply not customize 500 errors.
         }
 
         public void Handle(HttpStatusCode statusCode, NancyContext context)
