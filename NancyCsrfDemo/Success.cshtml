@@ -1,0 +1,13 @@
+﻿@using NancyCsrfDemo
+
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+<html>
+<body>
+    Single Page Application Loaded!
+    <br />
+    Status: @ViewBag["Status"]
+    <br />
+    The Csrf token is: @Html.CsrfToken()
+</body>
+</html>
